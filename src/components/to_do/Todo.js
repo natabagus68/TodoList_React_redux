@@ -29,13 +29,13 @@ const Todo = () => {
     console.log(index)
     
     return (
-        <div class="card">
-            <div class="card-body">
+        <div className="card">
+            <div className="card-body">
                 <h4>Todo form</h4>
                <form onSubmit={handleSubmit}>
-                   <input type="text" class="form-control mb-2" name="nama" value={input.nama} onChange={handleChange} placeholder="nama" />
-                   <input type="text" class="form-control mb-2" name="sekolah" value={input.sekolah} onChange={handleChange}  placeholder="sekolah" /> 
-                   <button class="btn btn-primary" type="submit">Submit</button>
+                   <input type="text" className="form-control mb-2" name="nama" value={input.nama} onChange={handleChange} placeholder="nama" />
+                   <input type="text" className="form-control mb-2" name="sekolah" value={input.sekolah} onChange={handleChange}  placeholder="sekolah" /> 
+                   <button className="btn btn-primary" type="submit">Submit</button>
                </form>
             </div>
         </div>
