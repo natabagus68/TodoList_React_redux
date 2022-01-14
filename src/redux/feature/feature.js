@@ -3,13 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const todoListSlice = createSlice({
     name:'todo',
     initialState:{
-
+       list: []
     },
-    reducer:{
-
+    reducers:{
+         add: (state, action) => {
+             state.list.push(action.payload);
+         }
     }
 })
 
 
-export const {} = todoListSlice.actions
+export const {add} = todoListSlice.actions
 export default todoListSlice.reducer
