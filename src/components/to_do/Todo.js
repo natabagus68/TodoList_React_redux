@@ -8,8 +8,8 @@ const Todo = () => {
     const dispatch = useDispatch();
     const index = useSelector(state => state.todo.list)
     const [input, setInput] = useState({
-        nama:'',
-        sekolah:''
+        type_todo:'',
+        describe_todo:'',
     })
 
 
@@ -33,8 +33,8 @@ const Todo = () => {
             <div className="card-body">
                 <h4>Todo form</h4>
                <form onSubmit={handleSubmit}>
-                   <input type="text" className="form-control mb-2" name="nama" value={input.nama} onChange={handleChange} placeholder="nama" />
-                   <input type="text" className="form-control mb-2" name="sekolah" value={input.sekolah} onChange={handleChange}  placeholder="sekolah" /> 
+                   <input type="text" className="form-control mb-2" name="type_todo" value={input.nama} onChange={handleChange} placeholder="type todo" />
+                   <input type="text" className="form-control mb-2" name="describe_todo" value={input.sekolah} onChange={handleChange}  placeholder="describe todo" /> 
                    <button className="btn btn-primary" type="submit">Submit</button>
                </form>
             </div>
