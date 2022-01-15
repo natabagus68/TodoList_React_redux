@@ -24,6 +24,11 @@ const Todo = () => {
          let i = index.length;
 
          dispatch(add({id:i+1, ...input}))
+
+         setInput({
+             type_todo:'',
+             describe_todo:''
+         })
     }
 
     console.log(index)
