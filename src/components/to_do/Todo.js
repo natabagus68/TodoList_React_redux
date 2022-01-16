@@ -26,8 +26,8 @@ const Todo = () => {
          dispatch(add({id:i+1, ...input}))
 
          setInput({
-             type_todo:'',
-             describe_todo:''
+             type_todo:null,
+             describe_todo:null
          })
     }
 

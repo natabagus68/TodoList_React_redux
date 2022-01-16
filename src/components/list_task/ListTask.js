@@ -99,7 +99,7 @@ const ListTask = () => {
             btnEdit? 
             
               <form onSubmit={handleKirimEdit}>
-                  <input type="text" name="id" value={id_todo} onChange={(event) => setId_todo(event.target.value)}/>
+                  <input type="hidden" name="id" value={id_todo} onChange={(event) => setId_todo(event.target.value)}/>
                   <input type='text' name='type_todo' value={type_todo}  className="form-control" placeholder='Edit tipe todo' onChange={(event) => setType_todo(event.target.value)} />
                   <input type='text' name='describe_todo' value={describe_todo} className="form-control mt-3" placeholder='Edit tipe todo' onChange={(event) => setDescribe_todo(event.target.value)} />
                   <button type='submit' className="btn btn-warning mt-3">Kirim!</button>
