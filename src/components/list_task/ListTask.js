@@ -17,6 +17,7 @@ const ListTask = () => {
       let filt = list.filter(e => e.id === id)
       setValue(filt);
       dispatch(addDone(value))
+      setValue(null)
    }
 
    const handleDetail = (id) => {
