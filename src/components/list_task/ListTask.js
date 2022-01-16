@@ -1,7 +1,7 @@
 import React, {Children, useState} from 'react'
 import './listtask.css'
 import {useSelector, useDispatch} from 'react-redux'
-import {addDone, Edit, deleted} from '../../redux/feature/feature'
+import {addDone, Edit, deleteds} from '../../redux/feature/feature'
 const ListTask = () => {
    const dispatch = useDispatch()
    const list = useSelector(state => state.todo.list)
@@ -39,6 +39,12 @@ const ListTask = () => {
      }
 
 
+
+     const handleDeleted = (id) => {
+       console.log('id delete button clicked', id)
+        dispatch(deleteds(id))
+     }
+
      console.log({type_todo:type_todo, descripe_todo:describe_todo})   
     return (
         <>
@@ -61,7 +67,7 @@ const ListTask = () => {
                           <td>
                               <button className="btn btn-success" onClick={()=>handleDone(e.id)}>done</button>
                               <button className="btn btn-primary" onClick={() => handleDetail(e.id)} data-bs-toggle="modal" data-bs-target="#exampleModal"> detail</button>
-                              <button className="btn btn-danger" onClick={() => dispatch(deleted(e.id))}>delete</button>
+                              <button className="btn btn-danger" onClick={() => handleDeleted(e.id)}>delete</button>
                           </td>
                       </tr>
                     ))}

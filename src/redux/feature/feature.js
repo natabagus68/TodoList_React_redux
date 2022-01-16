@@ -23,12 +23,11 @@ export const todoListSlice = createSlice({
              telek.list[ind] = action.payload
              
          },
-         deleted: (state, action) => {
-            let ind = state.list.findIndex(e => {
-                return e.id === action.payload.id
-            })
-
-            state.list.slice(ind)
+         deleteds: (state, action) => {
+             console.log(action.payload)
+            let ind = state.list.filter(e => e.id !== action.payload )
+            state.list = ind
+            
              
          }
          
@@ -36,5 +35,5 @@ export const todoListSlice = createSlice({
 })
 
 
-export const {add, addDone, Edit, deleted} = todoListSlice.actions
+export const {add, addDone, Edit, deleteds} = todoListSlice.actions
 export default todoListSlice.reducer
